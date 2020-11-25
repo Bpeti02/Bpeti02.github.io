@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hu">
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* nem látogatott link */
+  a:link {
+    color: blue;
+  }
+  
+  /* megnézett link */
+  a:visited {
+    color: green;
+  }
+  
+  /* ha felette van az egér link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }
+  </style>
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</header>
+<body style="font-family:Verdana;">
+  <script>
+
+    function myFunction()
+    {
+    var alapmeret = parseInt(document.getElementById('tarolo').innerHTML);
+    
+    document.getElementById('tarolo').innerHTML = parseInt(alapmeret+3);
+    document.body.style.fontSize = alapmeret+"px";
+    }
+    </script>
+    
+    <div id="tarolo" style="display: none;">12</div>
+    <span>Nagyításhoz kattints ide</span>
+    <button onclick="myFunction();">A+</button>
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>Hogyan állj át IOS-ről Androidra?</h1>
+  
+
+
+<div style="overflow:auto">
+  <div class="menu">
+    
+    <div class="menuitem"><input type="button" value="Főoldal" onclick="location='index.html';"></div>
+    <div class="menuitem"><input type="button" value="Androidról IOS-re" onclick="location='androidios.html';"></div>
+    <div class="menuitem"><input type="button" value="Hasznos appok" onclick="location='hasznosappok.html';"></div>
+  </div>
+
+  <div class="main">
+    <p> A legutóbbi frissítéssel egy automatikus háttérmentési funkciót adott a Google az iOS-es Google Drive-hoz. 
+      Jól jöhet, ha valaki váltana iOS-ről Androidra. Egyszerűbbé válik a dolga annak, aki mondjuk karácsonyra kapott androidos 
+      készülékére szeretné átvinni az addig iPhone-on tárolt adatokat – a Google (érthetően) <a href="https://www.android.com/intl/en_us/switch/" target="_blank"> minden segítséget megad </a> ehhez. 
+      Van azonban egy feltétel, az iOS-es telefonon rajta kell lennie a Google Drive alkalmazásnak, ez azonban <a href="https://apps.apple.com/us/app/google-drive-free-online-storage/id507874739" target="_blank"> ingyenesen és egyszerűen letölthető </a>
+   </p>
+   <p>A Google a közelmúltban frissítette ezt az appot, és ennek köszönhetően a felhasználók három egyszerű lépésben továbbíthatják a másik rendszerre az 
+    adataikat, nincs szükség harmadik fél appjára.</p>
+    <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+        
+
+  </div>
+  <div class="right">
+    <aside><p><p>Az adatátvitelhez el kell indítani a Google Drive-ot az iPhone-on, majd a bal felső ikonra kattintva megnyitni a menüt, és ott megkeresni a Beállításokat. 
+      Itt a Biztonsági másolatot kell választani, mire előkerül az Automatikus mentés a Google Drive-val lehetőség. Ha ezt választjuk, valamennyi névjegy, naptáresemény, 
+      fotó és videó elmentődik a Google felhőjébe. Ez a folyamat azonban akár órákig is eltarthat, úgyhogy mindenképpen wifi mellett csináljuk.</p>
+      <p></p>
+      <p>Ezután az androidos eszközön kell bejelentkezni a Google-szolgáltatásokba, természetesen ugyanazzal a hozzáféréssel, mint amit az iPhone-nál
+       is megadtunk. Az iMessage-et ki kell kapcsolni. A továbbiakban valamennyi képünk elérhető lesz a Google Photosban, kontaktjaink a Contactsban, 
+       az eseményeink pedig a Google Calendarsban.</p>
+
+       <section>
+        <a href="https://hun.ultracomputersystems.com/5090488-how-to-transfer-data-from-iphone-to-android" target="_blank"> <b>Hogyan továbbítsuk az adatokat? </b></a>
+        <p></p><a href="https://support.google.com/android/answer/6193424?hl=hu" target="_blank"> <b>Válts új Android telefonra </b></a>
+      </section>
+
+      </aside>
+    
+      
+        
+  
+  </div>
+
+  
+
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;">Ez a weblap nem egy szakértő által készült, pusztán segítő szándék által vezérelve készült el az oldal.</div>
+
+</body>
+</html>
