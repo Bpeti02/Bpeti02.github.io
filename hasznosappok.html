@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="hu">
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* nem látogatott link */
+  a:link {
+    color: blue;
+  }
+  
+  /* megnézett link */
+  a:visited {
+    color: green;
+  }
+  
+  /* ha felette van az egér link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }
+  </style>
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</header>
+<body style="font-family:Verdana;">
+  <script>
+
+    function myFunction()
+    {
+    var alapmeret = parseInt(document.getElementById('tarolo').innerHTML);
+    
+    document.getElementById('tarolo').innerHTML = parseInt(alapmeret+3);
+    document.body.style.fontSize = alapmeret+"px";
+    }
+    </script>
+    
+    <div id="tarolo" style="display: none;">12</div>
+    <span>Nagyításhoz kattints ide</span>
+    <button onclick="myFunction();">A+</button>
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>Hasznos Appok IOS és Android rendszerekre</h1>
+  
+
+
+<div style="overflow:auto">
+  <div class="menu">
+    
+    <div class="menuitem"><input type="button" value="Főoldal" onclick="location='index.html';"></div>
+    <div class="menuitem"><input type="button" value="IOS-ről Androidra" onclick="location='iosandroid.html';"></div>
+    <div class="menuitem"><input type="button" value="Androidról IOS-re" onclick="location='androidios.html';"></div>
+    
+  </div>
+
+  <div class="main">
+    <table align="center" border="1">
+      <caption>A táblázatban találtok néhány hasznos appot, amit szerintem érdemes letölteni</caption>
+      <th>Hasznos IOS és Android Appok</th>
+      <tr><td>Garage Band</td>
+        <td>iMovie</td>
+        <td>iCloud drive</td></tr>
+      <tr><td>Google Drive</td>
+        <td>Garage Band</td>
+        <td>To Do</td></tr>
+      <tr><td>Neptun</td>
+        <td>Timetable</td>
+        <td>Outlook</td></tr>
+      </table>  
+      
+        
+
+  </div>
+  <div class="right">
+    <a>Ha ezeket az alkalmazásokat le szeretnétek tölteni, akkor szükségetek lesz az úgynezevezz App store
+      áruházak használatára. Amenniyben <a href="https://www.apple.com/hu/ios/ios-14/" target="_blank"> IOS-es </a>
+      operációs rendszert használsz, úgy neked az <a href="https://www.apple.com/hu/ios/app-store/" target="_blank"> App Store-ra </a>
+      lesz szükséged a letöltéshez. <p></p>
+      <a>Ha az <a href="https://www.android.com" target="_blank"> Androidos </a> kínálatból választottál magadnak készüléket, úgy a 
+      <a href="https://play.google.com/store?utm_source=emea_Med&utm_medium=hasem&utm_content=090514&utm_campaign=Evergreen&pcampaignid=MKT-EG-emea-hu-all-Med-hasem-py-Evergreen-090514-1%7CONSEM_kwid_43700007034273629&gclid=CjwKCAiA-_L9BRBQEiwA-bm5fmsX-2NTxmF4nyrbbxGPg9PbfOBHbNSwEyVH5Lzd_xLDw5DM79ubMxoCPmwQAvD_BwE&gclsrc=aw.ds" target="_blank"> Google Play </a> áruház lesz neked hasznos.</a>
+    </a>
+    <div style="float: right;
+                    margin: 0px; padding: 5px;
+                    border-style: none;
+                    width: 258px">
+                
+                <a href="iphone.jpg"
+                    onclick="window.open('iphone.jpg', '',
+                    'width=825, height=625, left=20, top=25, screenX=20, screenY=25, directories=no, menubar=no, toolbar=no');
+                    return false;">
+                
+                <img src="iphone.jpg"
+                    width="248" height="186" alt="iphone"
+                    style="margin: 0px">
+                
+                </a>
+                
+                <p style="font-size: 10pt;
+                    color: #555555;
+                    text-align: center;
+                    margin-top: 3px">
+                    <h4>Nagyításhoz kattints a képre!</h4></p>
+                
+                </div>
+      
+        
+  
+  </div>
+
+  <div class="main">
+    
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="chrome.jpg" style="width:100%">
+        <div class="text">Google Chrome</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="shazam-logo.jpg" style="width:100%">
+        <div class="text">Shazam</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="imovie.jpg" style="width:100%">
+        <div class="text">iMovie</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="GarageBand.jpg" style="width:100%">
+        <div class="text">Garage Band</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="gd.jpg" style="width:100%">
+        <div class="text">Google Drive</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+
+   
+  </div>
+</div>
+
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;">Ez a weblap nem egy szakértő által készült, pusztán segítő szándék által vezérelve készült el az oldal.</div>
+
+</body>
+</html>
