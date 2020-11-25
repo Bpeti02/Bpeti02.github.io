@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hu">
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* nem látogatott link */
+  a:link {
+    color: blue;
+  }
+  
+  /* megnézett link */
+  a:visited {
+    color: green;
+  }
+  
+  /* ha felette van az egér link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }
+  </style>
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</header>
+<body style="font-family:Verdana;">
+  <script>
+
+    function myFunction()
+    {
+    var alapmeret = parseInt(document.getElementById('tarolo').innerHTML);
+    
+    document.getElementById('tarolo').innerHTML = parseInt(alapmeret+3);
+    document.body.style.fontSize = alapmeret+"px";
+    }
+    </script>
+    
+    <div id="tarolo" style="display: none;">12</div>
+    <span>Nagyításhoz kattints ide</span>
+    <button onclick="myFunction();">A+</button>
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>Hogyan állj át Androidról IOS-re?</h1>
+  
+
+
+<div style="overflow:auto">
+  <div class="menu">
+    
+    <div class="menuitem"><input type="button" value="Főoldal" onclick="location='index.html';"></div>
+    <div class="menuitem"><input type="button" value="IOS-ről Androidra" onclick="location='iosandroid.html';"></div>
+    <div class="menuitem"><input type="button" value="Hasznos appok" onclick="location='hasznosappok.html';"></div>
+  </div>
+
+  <div class="main">
+    <article>A kezdés előtti teendők
+      <p></p>
+      • Ellenőrizze Android-készülékén, hogy a Wi-Fi be van-e kapcsolva.
+      <p></p>
+      • Csatlakoztassa új iOS-készülékét és az Android-készüléket a tápforráshoz.
+      <p></p>
+      • Győződjön meg arról, hogy az átköltöztetni kívánt tartalmak – a külső micro-SD-
+      kártyán tárolt tartalmak is – el fognak férni az új iOS-készüléken
+      <p></p>
+      • Ha át szeretné másolni a Chrome által tárolt könyvjelzőket, frissítsen a Chrome legújabb verziójára Android-készülékén.
+      Koppintson a Költöztetés Androidról elemre
+      <p></p>
+      Az új iOS-készülék beállításakor várjon, amíg meg nem jelenik az Alkalmazások és adatok képernyő. Ezután koppintson a Költöztetés Androidról elemre. (Ha már végrehajtotta a beállítást, törölje az iOS-készülék tartalmát, majd kezdje elölről a folyamatot. Ha nem szeretné elvégezni a törlést, manuálisan helyezze át a tartalmakat.)
+      Nyissa meg a Váltás iOS-re alkalmazást
+      Android-készülékén nyissa meg a Váltás iOS-re alkalmazást, és koppintson a Folytatás elemre. Olvassa el a képernyőn látható szerződési feltételeket. A folytatáshoz koppintson az Elfogadás gombra, majd a Kód megkeresése képernyő tetején található Következő gombra. Várjon a kód megjelenésére
+      iOS-készülékén koppintson a Folytatás elemre a Váltás Androidról nevű képernyőn. Ezután várjon addig, amíg meg nem jelenik a tíz- vagy hatjegyű kód. Ha Android-készüléke arról értesíti, hogy gyenge az internetkapcsolat, hagyja figyelmen kívül az üzenetet.
+      Használja a kódot
+      Írja be a kódot Android-készülékén. Ezután várjon addig, amíg meg nem jelenik az Adatok áthelyezése képernyő.
+      Válassza ki a tartalmakat, és várjon
+      Android-készülékén válassza ki az áthelyezni kívánt tartalmakat, majd koppintson a Következő gombra. Ezután ne érjen hozzá egyik készülékhez sem addig, amíg a betöltési folyamatot jelző sáv a művelet befejeződését nem jelzi az iOS-készüléken – akkor se, ha az Android-készülék szerint befejeződött a művelet. Az átvitel az áthelyezendő tartalmak mennyiségétől függően hosszabb időt is igénybe vehet.
+      Állítsa be az iOS-készüléket
+      Amikor a betöltési folyamatot jelző sáv a művelet befejeződését jelzi az iOS-készüléken, koppintson a Kész elemre az Android-készüléken. Ezután koppintson a Folytatás elemre az iOS- készüléken, és a képernyőn látható útmutató követésével fejezze be az iOS-készülék beállítását.
+      Befejezés
+      Győződjön meg arról, hogy az összes tartalom áthelyezése megtörtént. A zenéket, könyveket és PDF-fájlokat manuálisan kell áthelyezni.
+      Szüksége van az Android-készülékén használt alkalmazásokra? Lépjen be az App Store-ba az iOS- készüléken, és töltse le őket.
+<p></p></article>
+    <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+        
+
+  </div>
+  <div class="right">
+    <aside><h2>E-mailek, névjegyek és naptárak</h2><p></p>
+      Az iPhone, iPad vagy iPod touch készülékén található szoftver együttműködik az olyan 
+      e-mail-szolgáltatókkal, mint a Google, a Microsoft Exchange és a Yahoo, így valószínűleg nem fog 
+      gondot okozni a jelenlegi e-mailek, névjegyek és naptárak megtartása. A kezdéshez adja meg mindegyik
+       e-mail-fiókját a készülékén. Ezután lépjen a Beállítások --> Jelszó és fiókok menüpontba.
+       <p></p><h2>Alkalmazások</h2><p></p>
+       Az Android-készülékén használt legtöbb alkalmazás megtalálható az App Store-ban. Lépjen az App Store-ba, keresse meg a jelenleg használt alkalmazásokat, és telepítse őket.
+       Ha külső alkalmazásokhoz és adatokhoz van segítségre szüksége, lépjen kapcsolatba az alkalmazás fejlesztőjével.
+       <div style="float: right;
+                    margin: 0px; padding: 5px;
+                    border-style: none;
+                    width: 258px">
+                
+                <a href="android-and-ios-development.jpg"
+                    onclick="window.open('android-and-ios-development.jpg', '',
+                    'width=825, height=625, left=20, top=25, screenX=20, screenY=25, directories=no, menubar=no, toolbar=no');
+                    return false;">
+                
+                <img src="android-and-ios-development.jpg"
+                    width="248" height="186" alt="iphone"
+                    style="margin: 0px">
+                
+                </a>
+                
+                <p style="font-size: 10pt;
+                    color: #555555;
+                    text-align: center;
+                    margin-top: 3px">
+                    <h4>Nagyításhoz kattints a képre!</h4></p>
+                
+                </div>
+       <section>
+        <a href="https://support.apple.com/hu-hu/HT201196"> <b>Apple hivatalos segítség </b></a>
+        
+      </section>
+
+      </aside>
+    
+      
+        
+  
+  </div>
+
+  
+
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;">Ez a weblap nem egy szakértő által készült, pusztán segítő szándék által vezérelve készült el az oldal.</div>
+
+</body>
+</html>
