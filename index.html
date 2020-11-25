@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</header>
+<body style="font-family:Verdana;">
+
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>Hogyan válts mobilplatformot?</h1>
+  <h3>Megmutatom</h3>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    
+    <div class="menuitem"><input type="button" value="Főoldal" onclick="location='index.html';"></div>
+    <div class="menuitem"><input type="button" value="IOS-ről Androidra" onclick="location='iosandroid.html';"></div>
+    <div class="menuitem"><input type="button" value="Androidról IOS-re" onclick="location='androidios.html';"></div>
+    <div class="menuitem"><input type="button" value="Hasznos appok" onclick="location='hasznosappok.html';"></div>
+  </div>
+
+  <div class="main">
+    <h5>Androidról IOS-re, vagy fordítva, IOS-ről Androidra az átállás sokak számára macerás, bonyolult, és ami a leginkább probléma:
+      stresszes lehet, hiszen miért is kéne magától tudnia bárkinek is, hogy egy nagyon egyszerű folyamatról van szó. Én magam is többször váltottam
+      már a két platform között, jelenleg pedig ugyan az elsődleges telefonom android operációs rendszerű,
+      de használom az IOS-t napi szinten iPaden (már iPad OS lett
+      a neve a rendszernek, de szinte ugyan az a kettő) illetve az előző iPhone telefonom is megvan még. Ennek a weblapnak a célja, hogy segítséget nyújtson mindazok
+      számára, akik a készülékváltáson gondolkoznak. Ha segítségre lenne szükséged, esetleg javaslatod van, vagy nem találtad meg, amit keresel, akkor nyugodtan keress
+      a lenti kitölthető formon keresztül.</h5>
+      
+        <td width=750"><iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe><div class="menuitem"><input type="button" value="Felirat" onclick="location='feliratdroid.html';"></div>
+      </h5>
+    <td width=750" height="70%"><iframe width="560" height="315" src="https://www.youtube.com/embed/YDDguZoYn5I" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe><div class="menuitem"><input type="button" value="Felirat" onclick="location='feliratapple.html';"></div>
+  </iframe></td>
+  </div>
+
+  <div class="right">
+    <h2>IOS 14 által támogatott eszközök:</h2>
+    <ul>
+      <li>iPhone 11</li>
+      <li>iPhone 11 pro</li>
+      <li>iPhone 11 pro max</li>
+      <li>iPhone XS</li>
+      <li>iPhone XS max</li>
+      <li>iPhone XR</li>
+      <li>iPhone X</li>
+      <li>iPhone 8</li>
+      <li>iPhone 8 Plus</li>
+      <li>iPhone 7</li>
+      <li>iPhone 7 Plus</li>
+      <li>iPhone 6S</li>
+      <li>iPhone 6S Plus</li>
+      <li>iPhone SE (1st gen)</li>
+      <li>iPhone SE (2nd gen)</li>
+      <li>iPod touch 7th gen</li>
+      </ul>
+    <h2>Legfrissebb androidos telefonok listája:</h2>
+    <a href="https://www.android.com"><img src="android.jpg" alt="droid kép" width="90" height="90"></a>
+    <h2>Segítségre lenne szükséged?</h2>
+    <form name="urlap" method="post" action="mailto:g4a5wk@inf.elte.hu">
+      Neved: <input type="text" name="szmezo" size="10" maxlength="25"><br>
+    Telefonszámod:<input type="text" name="jmezo" size="8" maxlength="15"><br>
+    e-mail címed:<input type="text" name="szev" size="10" maxlength="40"><br> 
+    <p> Milyen telefonra szeretnél váltani? </p>
+    <p><input type="radio" name="film" value="rossz"> IOS-es </p>
+    <p><input type="radio" name="film" value="jo"> Androidos </p>
+    <p><input type="radio" name="film" value="rossz"> Egyéb, megírom </p>
+    <p> Milyen operációs rendszereket használtál eddig? </p>
+    <p><input type="checkbox" name="Pascal" value="tanult"> IOS </p>
+    <p><input type="checkbox" name="C++" value="tanult"> Android </p>
+    <p><input type="checkbox" name="C++" value="tanult"> Windows Phone </p>
+    <p><input type="checkbox" name="C++" value="tanult"> Egyéb </p>
+    <textarea name="szdoboz" cols="28" rows="6"> Ide írd le röviden, hogy miben akadtál el </textarea><br>
+      <select name="lista">
+      <option> IOS
+      <option> Android
+        <option> Egyéb
+      <option selected> Milyen oprendszered van?
+      </selection>
+      <input type="submit" value="Elküld">
+    <input type="reset" value="Töröl">
+  </div>
+</div>
+
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;">Ez a weblap nem egy szakértő által készült, pusztán segítő szándék által vezérelve készült el az oldal.</div>
+
+</body>
+</html>
