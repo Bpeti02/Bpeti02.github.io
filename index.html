@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <title>Bártfai Péter – Social Media Manager</title>
@@ -203,72 +203,6 @@
             font-weight: 500;
         }
 
-        form {
-            background: #020617;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            border: 1px solid #1f2937;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1rem;
-        }
-
-        @media (max-width: 700px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        label {
-            font-size: 0.9rem;
-            margin-bottom: 0.25rem;
-            display: block;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 0.6rem 0.7rem;
-            border-radius: 0.5rem;
-            border: 1px solid #374151;
-            background: #020617;
-            color: #e5e7eb;
-            font-size: 0.9rem;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-            color: #6b7280;
-        }
-
-        textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        button[type="submit"] {
-            margin-top: 1rem;
-            padding: 0.7rem 1.4rem;
-            border-radius: 999px;
-            border: none;
-            cursor: pointer;
-            background: linear-gradient(135deg, #a855f7, #6366f1);
-            color: white;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .small-info {
-            font-size: 0.8rem;
-            color: #6b7280;
-            margin-top: 0.4rem;
-        }
-
         footer {
             padding: 1.5rem 8vw 2rem;
             border-top: 1px solid #1f2937;
@@ -370,60 +304,23 @@
         </p>
     </section>
 
-    <!-- CONTACT FORM -->
+    <!-- CONTACT (GOOGLE FORM) -->
     <section>
         <h2 class="section-title" id="contact-title">Lépj velem kapcsolatba</h2>
         <p class="section-subtitle" id="contact-subtitle">
-            Töltsd ki az űrlapot, válaszd ki a csomagot, és hamarosan felveszem veled a kapcsolatot.
+            Töltsd ki az alábbi űrlapot, és hamarosan válaszolok.
         </p>
 
-        <form action="send_mail.php" method="POST">
-            <div class="form-row">
-                <div>
-                    <label for="name" id="label-name">Név</label>
-                    <input type="text" id="name" name="name" placeholder="Írd be a neved" required>
-                </div>
-                <div>
-                    <label for="email" id="label-email">E-mail cím</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                </div>
-            </div>
-
-            <div class="form-row" style="margin-top: 1rem;">
-                <div>
-                    <label for="package" id="label-package">Választott csomag</label>
-                    <select id="package" name="package" required>
-                        <option value="basic" id="opt-basic">
-                            Alap csomag – 160.000 Ft / hó
-                        </option>
-                        <option value="medium" id="opt-medium">
-                            Közepes csomag – 250.000 Ft / hó
-                        </option>
-                        <option value="pro" id="opt-pro">
-                            Pro csomag – 350.000 Ft / hó
-                        </option>
-                        <option value="custom" id="opt-custom">
-                            Egyedi igény / Special request
-                        </option>
-                    </select>
-                </div>
-                <div>
-                    <label for="subject" id="label-subject">Tárgy / Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Pl.: Instagram Reels videók" required>
-                </div>
-            </div>
-
-            <div style="margin-top: 1rem;">
-                <label for="message" id="label-message">Üzenet</label>
-                <textarea id="message" name="message" placeholder="Írd le, miben tudok segíteni." required></textarea>
-            </div>
-
-            <button type="submit" id="btn-submit">Üzenet küldése</button>
-
-            <p class="small-info" id="contact-small-info">
-                Az üzenetedet közvetlenül a <strong>bartfaipeti@gmail.com</strong> címre kapom meg.
-            </p>
-        </form>
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSf38OEFA8iJ9LCK-F00mYFxbELl9NN0QIs5YhPdDoQT06t4yw/viewform?embedded=true"
+            width="100%" 
+            height="1500" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+            style="background: white; border-radius: 12px; border: 1px solid #1f2937;">
+            Loading…
+        </iframe>
     </section>
 </main>
 
@@ -444,7 +341,6 @@
             heroCardLine2: "• Facebook és Instagram oldalkezelés",
             heroCardLine3: "• Teljes körű social média stratégia és kivitelezés",
             heroCardStat: "Írj üzenetet, és együtt összerakjuk azt a csomagot, ami a legjobban illik a vállalkozásodhoz.",
-
             packagesTitle: "Csomagajánlataim",
             packagesSubtitle: "Válaszd ki, mire van szüksége a vállalkozásodnak – a tartalomgyártástól a teljes körű menedzsmentig.",
             pkgBasicName: "Alap csomag",
@@ -457,25 +353,8 @@
             pkgProPrice: "350.000 Ft / hó",
             pkgProDetail: "Teljes körű Social Media menedzsment: stratégia, tartalomgyártás, közzététel és riportok.",
             customNote: "Egyedi igény esetén természetesen <span class=\"highlight\">személyre szabott csomagajánlatot</span> is szívesen készítek.",
-
             contactTitle: "Lépj velem kapcsolatba",
-            contactSubtitle: "Töltsd ki az űrlapot, válaszd ki a csomagot, és hamarosan felveszem veled a kapcsolatot.",
-            labelName: "Név",
-            labelEmail: "E-mail cím",
-            labelPackage: "Választott csomag",
-            labelSubject: "Tárgy / Subject",
-            labelMessage: "Üzenet",
-            optBasic: "Alap csomag – 160.000 Ft / hó",
-            optMedium: "Közepes csomag – 250.000 Ft / hó",
-            optPro: "Pro csomag – 350.000 Ft / hó",
-            optCustom: "Egyedi igény / Special request",
-            placeholderName: "Írd be a neved",
-            placeholderEmail: "you@example.com",
-            placeholderSubject: "Pl.: Instagram Reels videók",
-            placeholderMessage: "Írd le, miben tudok segíteni.",
-            btnSubmit: "Üzenet küldése",
-            contactSmallInfo: "Az üzenetedet közvetlenül a <strong>bartfaipeti@gmail.com</strong> címre kapom meg.",
-
+            contactSubtitle: "Töltsd ki az alábbi űrlapot, és hamarosan válaszolok.",
             footerRights: "Minden jog fenntartva."
         },
         en: {
@@ -488,7 +367,6 @@
             heroCardLine2: "• Managing Facebook and Instagram pages",
             heroCardLine3: "• Full social media strategy and execution",
             heroCardStat: "Send me a message and we’ll put together the package that fits your business best.",
-
             packagesTitle: "My Packages",
             packagesSubtitle: "Choose what your business needs – from content creation to full social media management.",
             pkgBasicName: "Basic Package",
@@ -501,43 +379,23 @@
             pkgProPrice: "350,000 HUF / month",
             pkgProDetail: "Full Social Media Management: strategy, content creation, posting and reports.",
             customNote: "If you have <span class=\"highlight\">special requirements</span>, I’m happy to create a fully custom offer for you.",
-
             contactTitle: "Get in touch",
-            contactSubtitle: "Fill out the form, choose a package and I’ll get back to you shortly.",
-            labelName: "Name",
-            labelEmail: "Email address",
-            labelPackage: "Selected package",
-            labelSubject: "Subject",
-            labelMessage: "Message",
-            optBasic: "Basic Package – 160,000 HUF / month",
-            optMedium: "Medium Package – 250,000 HUF / month",
-            optPro: "Pro Package – 350,000 HUF / month",
-            optCustom: "Custom / Special request",
-            placeholderName: "Enter your name",
-            placeholderEmail: "you@example.com",
-            placeholderSubject: "e.g. Instagram Reels videos",
-            placeholderMessage: "Tell me what you need help with.",
-            btnSubmit: "Send message",
-            contactSmallInfo: "Your message will be sent directly to <strong>bartfaipeti@gmail.com</strong>.",
-
+            contactSubtitle: "Fill out the form below and I will get back to you soon.",
             footerRights: "All rights reserved."
         }
     };
 
     function setLang(lang) {
         const t = translations[lang];
-
         document.getElementById("tagline-text").innerText = t.tagline;
         document.getElementById("hero-title").innerText = t.heroTitle;
         document.getElementById("hero-subtitle").innerText = t.heroSubtitle;
         document.getElementById("hero-text").innerText = t.heroText;
-
         document.getElementById("hero-card-title").innerText = t.heroCardTitle;
         document.getElementById("hero-card-line1").innerText = t.heroCardLine1;
         document.getElementById("hero-card-line2").innerText = t.heroCardLine2;
         document.getElementById("hero-card-line3").innerText = t.heroCardLine3;
         document.getElementById("hero-card-stat").innerText = t.heroCardStat;
-
         document.getElementById("packages-title").innerText = t.packagesTitle;
         document.getElementById("packages-subtitle").innerText = t.packagesSubtitle;
         document.getElementById("pkg-basic-name").innerText = t.pkgBasicName;
@@ -550,35 +408,13 @@
         document.getElementById("pkg-pro-price").innerText = t.pkgProPrice;
         document.getElementById("pkg-pro-detail").innerText = t.pkgProDetail;
         document.getElementById("custom-note").innerHTML = t.customNote;
-
         document.getElementById("contact-title").innerText = t.contactTitle;
         document.getElementById("contact-subtitle").innerText = t.contactSubtitle;
-        document.getElementById("label-name").innerText = t.labelName;
-        document.getElementById("label-email").innerText = t.labelEmail;
-        document.getElementById("label-package").innerText = t.labelPackage;
-        document.getElementById("label-subject").innerText = t.labelSubject;
-        document.getElementById("label-message").innerText = t.labelMessage;
-
-        document.getElementById("opt-basic").innerText = t.optBasic;
-        document.getElementById("opt-medium").innerText = t.optMedium;
-        document.getElementById("opt-pro").innerText = t.optPro;
-        document.getElementById("opt-custom").innerText = t.optCustom;
-
-        document.getElementById("name").placeholder = t.placeholderName;
-        document.getElementById("email").placeholder = t.placeholderEmail;
-        document.getElementById("subject").placeholder = t.placeholderSubject;
-        document.getElementById("message").placeholder = t.placeholderMessage;
-
-        document.getElementById("btn-submit").innerText = t.btnSubmit;
-        document.getElementById("contact-small-info").innerHTML = t.contactSmallInfo;
-
         document.getElementById("footer-rights").innerText = t.footerRights;
 
         document.querySelectorAll(".lang-btn").forEach(btn => {
             btn.classList.toggle("active", btn.dataset.lang === lang);
         });
-
-        document.documentElement.lang = lang === "hu" ? "hu" : "en";
     }
 
     document.querySelectorAll(".lang-btn").forEach(btn => {
@@ -587,8 +423,9 @@
 
     document.getElementById("footer-year").innerText = new Date().getFullYear();
 
-    // default: HU
+    // default language HU
     setLang("hu");
 </script>
+
 </body>
 </html>
