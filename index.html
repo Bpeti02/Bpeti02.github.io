@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bártfai Péter – Social Media Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8vw;
+            background: rgba(15,23,42,0.95);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .logo span {
+            color: #a855f7;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            border: 1px solid #4b5563;
+            background: transparent;
+            color: #e5e7eb;
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .lang-btn.active {
+            background: #a855f7;
+            border-color: #a855f7;
+            color: white;
+        }
+
+        main {
+            padding: 2.5rem 8vw 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 800px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text {
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+        }
+
+        .tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            background: rgba(168,85,247,0.1);
+            color: #e5e7eb;
+            margin-bottom: 0.9rem;
+        }
+
+        .tagline-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34,197,94,0.25);
+        }
+
+        .hero-card {
+            background: radial-gradient(circle at top left, rgba(59,130,246,0.3), transparent 60%),
+                        radial-gradient(circle at bottom right, rgba(168,85,247,0.3), transparent 60%),
+                        #020617;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(148,163,184,0.4);
+            box-shadow: 0 20px 60px rgba(15,23,42,0.9);
+        }
+
+        .hero-card h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-card p {
+            font-size: 0.9rem;
+            color: #d1d5db;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-card .stat {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2.section-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p.section-subtitle {
+            font-size: 0.95rem;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1000px) {
+            .packages {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .package-card {
+            background: #020617;
+            border-radius: 1rem;
+            padding: 1.3rem;
+            border: 1px solid #1f2937;
+        }
+
+        .package-name {
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .package-price {
+            font-size: 1.1rem;
+            color: #a855f7;
+            margin-bottom: 0.2rem;
+        }
+
+        .package-detail {
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+
+        .custom-note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: #a855f7;
+            font-weight: 500;
+        }
+
+        form {
+            background: #020617;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #1f2937;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        label {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.6rem 0.7rem;
+            border-radius: 0.5rem;
+            border: 1px solid #374151;
+            background: #020617;
+            color: #e5e7eb;
+            font-size: 0.9rem;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #6b7280;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            margin-top: 1rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(135deg, #a855f7, #6366f1);
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .small-info {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 0.4rem;
+        }
+
+        footer {
+            padding: 1.5rem 8vw 2rem;
+            border-top: 1px solid #1f2937;
+            font-size: 0.8rem;
+            color: #6b7280;
+            text-align: center;
+        }
+
+        a {
+            color: #9f7aea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <span>BP</span> Social Media
+    </div>
+    <div class="lang-switch">
+        <button class="lang-btn active" data-lang="hu">HU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <div class="tagline">
+                <span class="tagline-dot"></span>
+                <span id="tagline-text">
+                    Rövid videók, amelyekből vásárlók lesznek.
+                </span>
+            </div>
+            <h1 class="hero-title" id="hero-title">
+                Bártfai Péter – Social Media menedzser
+            </h1>
+            <p class="hero-subtitle" id="hero-subtitle">
+                Reels videók, TikTok és Instagram tartalom, ami valódi elérést és vevőt hoz.
+            </p>
+            <p class="hero-text" id="hero-text">
+                Évek óta készítek social média tartalmakat vállalkozásoknak. Leginkább 
+                Reels és TikTok videókra specializálódtam, amelyek segítenek a márkádnak 
+                kitűnni és folyamatosan új érdeklődőket hozni.
+            </p>
+        </div>
+        <div class="hero-card">
+            <h2 id="hero-card-title">Miben tudok segíteni?</h2>
+            <p id="hero-card-line1">• Reels és TikTok videók forgatása és vágása</p>
+            <p id="hero-card-line2">• Facebook és Instagram oldalkezelés</p>
+            <p id="hero-card-line3">• Teljes körű social média stratégia és kivitelezés</p>
+            <p class="stat" id="hero-card-stat">
+                Írj üzenetet, és együtt összerakjuk azt a csomagot, ami a legjobban illik a
+                vállalkozásodhoz.
+            </p>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section>
+        <h2 class="section-title" id="packages-title">Csomagajánlataim</h2>
+        <p class="section-subtitle" id="packages-subtitle">
+            Válaszd ki, mire van szüksége a vállalkozásodnak – a tartalomgyártástól a teljes körű menedzsmentig.
+        </p>
+
+        <div class="packages">
+            <div class="package-card">
+                <div class="package-name" id="pkg-basic-name">Alap csomag</div>
+                <div class="package-price" id="pkg-basic-price">160.000 Ft / hó</div>
+                <div class="package-detail" id="pkg-basic-detail">
+                    Heti 5 db Reels videó készítése és publikálása.
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-name" id="pkg-medium-name">Közepes csomag</div>
+                <div class="package-price" id="pkg-medium-price">250.000 Ft / hó</div>
+                <div class="package-detail" id="pkg-medium-detail">
+                    Heti 5 db Reels videó + Facebook oldalkezelés + heti 5 db Instagram poszt.
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-name" id="pkg-pro-name">Pro csomag</div>
+                <div class="package-price" id="pkg-pro-price">350.000 Ft / hó</div>
+                <div class="package-detail" id="pkg-pro-detail">
+                    Teljes körű Social Media menedzsment: stratégia, tartalomgyártás, közzététel és riportok.
+                </div>
+            </div>
+        </div>
+
+        <p class="custom-note" id="custom-note">
+            Egyedi igény esetén természetesen <span class="highlight">személyre szabott csomagajánlatot</span> is szívesen készítek.
+        </p>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section>
+        <h2 class="section-title" id="contact-title">Lépj velem kapcsolatba</h2>
+        <p class="section-subtitle" id="contact-subtitle">
+            Töltsd ki az űrlapot, válaszd ki a csomagot, és hamarosan felveszem veled a kapcsolatot.
+        </p>
+
+        <form action="send_mail.php" method="POST">
+            <div class="form-row">
+                <div>
+                    <label for="name" id="label-name">Név</label>
+                    <input type="text" id="name" name="name" placeholder="Írd be a neved" required>
+                </div>
+                <div>
+                    <label for="email" id="label-email">E-mail cím</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-top: 1rem;">
+                <div>
+                    <label for="package" id="label-package">Választott csomag</label>
+                    <select id="package" name="package" required>
+                        <option value="basic" id="opt-basic">
+                            Alap csomag – 160.000 Ft / hó
+                        </option>
+                        <option value="medium" id="opt-medium">
+                            Közepes csomag – 250.000 Ft / hó
+                        </option>
+                        <option value="pro" id="opt-pro">
+                            Pro csomag – 350.000 Ft / hó
+                        </option>
+                        <option value="custom" id="opt-custom">
+                            Egyedi igény / Special request
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="subject" id="label-subject">Tárgy / Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Pl.: Instagram Reels videók" required>
+                </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <label for="message" id="label-message">Üzenet</label>
+                <textarea id="message" name="message" placeholder="Írd le, miben tudok segíteni." required></textarea>
+            </div>
+
+            <button type="submit" id="btn-submit">Üzenet küldése</button>
+
+            <p class="small-info" id="contact-small-info">
+                Az üzenetedet közvetlenül a <strong>bartfaipeti@gmail.com</strong> címre kapom meg.
+            </p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    © <span id="footer-year"></span> <span id="footer-name">Bártfai Péter</span> – 
+    <span id="footer-rights">Minden jog fenntartva.</span>
+</footer>
+
+<script>
+    const translations = {
+        hu: {
+            tagline: "Rövid videók, amelyekből vásárlók lesznek.",
+            heroTitle: "Bártfai Péter – Social Media menedzser",
+            heroSubtitle: "Reels videók, TikTok és Instagram tartalom, ami valódi elérést és vevőt hoz.",
+            heroText: "Évek óta készítek social média tartalmakat vállalkozásoknak. Leginkább Reels és TikTok videókra specializálódtam, amelyek segítenek a márkádnak kitűnni és folyamatosan új érdeklődőket hozni.",
+            heroCardTitle: "Miben tudok segíteni?",
+            heroCardLine1: "• Reels és TikTok videók forgatása és vágása",
+            heroCardLine2: "• Facebook és Instagram oldalkezelés",
+            heroCardLine3: "• Teljes körű social média stratégia és kivitelezés",
+            heroCardStat: "Írj üzenetet, és együtt összerakjuk azt a csomagot, ami a legjobban illik a vállalkozásodhoz.",
+
+            packagesTitle: "Csomagajánlataim",
+            packagesSubtitle: "Válaszd ki, mire van szüksége a vállalkozásodnak – a tartalomgyártástól a teljes körű menedzsmentig.",
+            pkgBasicName: "Alap csomag",
+            pkgBasicPrice: "160.000 Ft / hó",
+            pkgBasicDetail: "Heti 5 db Reels videó készítése és publikálása.",
+            pkgMediumName: "Közepes csomag",
+            pkgMediumPrice: "250.000 Ft / hó",
+            pkgMediumDetail: "Heti 5 db Reels videó + Facebook oldalkezelés + heti 5 db Instagram poszt.",
+            pkgProName: "Pro csomag",
+            pkgProPrice: "350.000 Ft / hó",
+            pkgProDetail: "Teljes körű Social Media menedzsment: stratégia, tartalomgyártás, közzététel és riportok.",
+            customNote: "Egyedi igény esetén természetesen <span class=\"highlight\">személyre szabott csomagajánlatot</span> is szívesen készítek.",
+
+            contactTitle: "Lépj velem kapcsolatba",
+            contactSubtitle: "Töltsd ki az űrlapot, válaszd ki a csomagot, és hamarosan felveszem veled a kapcsolatot.",
+            labelName: "Név",
+            labelEmail: "E-mail cím",
+            labelPackage: "Választott csomag",
+            labelSubject: "Tárgy / Subject",
+            labelMessage: "Üzenet",
+            optBasic: "Alap csomag – 160.000 Ft / hó",
+            optMedium: "Közepes csomag – 250.000 Ft / hó",
+            optPro: "Pro csomag – 350.000 Ft / hó",
+            optCustom: "Egyedi igény / Special request",
+            placeholderName: "Írd be a neved",
+            placeholderEmail: "you@example.com",
+            placeholderSubject: "Pl.: Instagram Reels videók",
+            placeholderMessage: "Írd le, miben tudok segíteni.",
+            btnSubmit: "Üzenet küldése",
+            contactSmallInfo: "Az üzenetedet közvetlenül a <strong>bartfaipeti@gmail.com</strong> címre kapom meg.",
+
+            footerRights: "Minden jog fenntartva."
+        },
+        en: {
+            tagline: "Short videos that turn views into customers.",
+            heroTitle: "Péter Bártfai – Social Media Manager",
+            heroSubtitle: "Reels, TikTok and Instagram content that brings real reach and new clients.",
+            heroText: "I have been creating social media content for businesses for years. I specialize in Reels and TikTok videos that help your brand stand out and consistently attract new customers.",
+            heroCardTitle: "How I can help your business",
+            heroCardLine1: "• Shooting and editing Reels and TikTok videos",
+            heroCardLine2: "• Managing Facebook and Instagram pages",
+            heroCardLine3: "• Full social media strategy and execution",
+            heroCardStat: "Send me a message and we’ll put together the package that fits your business best.",
+
+            packagesTitle: "My Packages",
+            packagesSubtitle: "Choose what your business needs – from content creation to full social media management.",
+            pkgBasicName: "Basic Package",
+            pkgBasicPrice: "160,000 HUF / month",
+            pkgBasicDetail: "Creation and publishing of 5 Reels videos per week.",
+            pkgMediumName: "Medium Package",
+            pkgMediumPrice: "250,000 HUF / month",
+            pkgMediumDetail: "5 Reels per week + Facebook page management + 5 Instagram posts per week.",
+            pkgProName: "Pro Package",
+            pkgProPrice: "350,000 HUF / month",
+            pkgProDetail: "Full Social Media Management: strategy, content creation, posting and reports.",
+            customNote: "If you have <span class=\"highlight\">special requirements</span>, I’m happy to create a fully custom offer for you.",
+
+            contactTitle: "Get in touch",
+            contactSubtitle: "Fill out the form, choose a package and I’ll get back to you shortly.",
+            labelName: "Name",
+            labelEmail: "Email address",
+            labelPackage: "Selected package",
+            labelSubject: "Subject",
+            labelMessage: "Message",
+            optBasic: "Basic Package – 160,000 HUF / month",
+            optMedium: "Medium Package – 250,000 HUF / month",
+            optPro: "Pro Package – 350,000 HUF / month",
+            optCustom: "Custom / Special request",
+            placeholderName: "Enter your name",
+            placeholderEmail: "you@example.com",
+            placeholderSubject: "e.g. Instagram Reels videos",
+            placeholderMessage: "Tell me what you need help with.",
+            btnSubmit: "Send message",
+            contactSmallInfo: "Your message will be sent directly to <strong>bartfaipeti@gmail.com</strong>.",
+
+            footerRights: "All rights reserved."
+        }
+    };
+
+    function setLang(lang) {
+        const t = translations[lang];
+
+        document.getElementById("tagline-text").innerText = t.tagline;
+        document.getElementById("hero-title").innerText = t.heroTitle;
+        document.getElementById("hero-subtitle").innerText = t.heroSubtitle;
+        document.getElementById("hero-text").innerText = t.heroText;
+
+        document.getElementById("hero-card-title").innerText = t.heroCardTitle;
+        document.getElementById("hero-card-line1").innerText = t.heroCardLine1;
+        document.getElementById("hero-card-line2").innerText = t.heroCardLine2;
+        document.getElementById("hero-card-line3").innerText = t.heroCardLine3;
+        document.getElementById("hero-card-stat").innerText = t.heroCardStat;
+
+        document.getElementById("packages-title").innerText = t.packagesTitle;
+        document.getElementById("packages-subtitle").innerText = t.packagesSubtitle;
+        document.getElementById("pkg-basic-name").innerText = t.pkgBasicName;
+        document.getElementById("pkg-basic-price").innerText = t.pkgBasicPrice;
+        document.getElementById("pkg-basic-detail").innerText = t.pkgBasicDetail;
+        document.getElementById("pkg-medium-name").innerText = t.pkgMediumName;
+        document.getElementById("pkg-medium-price").innerText = t.pkgMediumPrice;
+        document.getElementById("pkg-medium-detail").innerText = t.pkgMediumDetail;
+        document.getElementById("pkg-pro-name").innerText = t.pkgProName;
+        document.getElementById("pkg-pro-price").innerText = t.pkgProPrice;
+        document.getElementById("pkg-pro-detail").innerText = t.pkgProDetail;
+        document.getElementById("custom-note").innerHTML = t.customNote;
+
+        document.getElementById("contact-title").innerText = t.contactTitle;
+        document.getElementById("contact-subtitle").innerText = t.contactSubtitle;
+        document.getElementById("label-name").innerText = t.labelName;
+        document.getElementById("label-email").innerText = t.labelEmail;
+        document.getElementById("label-package").innerText = t.labelPackage;
+        document.getElementById("label-subject").innerText = t.labelSubject;
+        document.getElementById("label-message").innerText = t.labelMessage;
+
+        document.getElementById("opt-basic").innerText = t.optBasic;
+        document.getElementById("opt-medium").innerText = t.optMedium;
+        document.getElementById("opt-pro").innerText = t.optPro;
+        document.getElementById("opt-custom").innerText = t.optCustom;
+
+        document.getElementById("name").placeholder = t.placeholderName;
+        document.getElementById("email").placeholder = t.placeholderEmail;
+        document.getElementById("subject").placeholder = t.placeholderSubject;
+        document.getElementById("message").placeholder = t.placeholderMessage;
+
+        document.getElementById("btn-submit").innerText = t.btnSubmit;
+        document.getElementById("contact-small-info").innerHTML = t.contactSmallInfo;
+
+        document.getElementById("footer-rights").innerText = t.footerRights;
+
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+
+        document.documentElement.lang = lang === "hu" ? "hu" : "en";
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => setLang(btn.dataset.lang));
+    });
+
+    document.getElementById("footer-year").innerText = new Date().getFullYear();
+
+    // default: HU
+    setLang("hu");
+</script>
+</body>
+</html>
